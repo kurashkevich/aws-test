@@ -20,3 +20,20 @@ CMD java -jar demo.jar
 
 # https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker
 # https://medium.com/devopslinks/dockerize-your-java-application-ec7ac056d066
+
+
+## Что нужно знать ко вторнику
+
+
+# docker interration plugin in idea
+
+# Archunit - проверка джавакода. Позволяет написать проверки для общего кода
+# guava!!!
+# liquebase - не зависит от баз данных (служит для того что бы уравнивать БД)
+# findbug
+# Использовать внешний мавен
+
+
+
+
+# Писать нужно stateless - сохранять состоаяния в БД
