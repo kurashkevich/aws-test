@@ -14,8 +14,13 @@ EXPOSE 8080
 CMD java -jar demo.jar
 
 
+#Создать докер image
 # docker build . -t aws-demo-image
+
+#Создать докер контейнер
 # docker run -t -p 8080:8080 --name aws-demo-container aws-demo-image
+
+
 # docker aws-demo-container
 
 # https://stackoverflow.com/questions/16840409/how-to-list-containers-in-docker
