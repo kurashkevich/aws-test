@@ -11,13 +11,17 @@
 
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get install -y --no-install-recommends git && apt-get install -y openssh-server
+RUN apt-get update && apt-get install -y --no-install-recommends git && apt-get install -y openssh-server && apt-get install default-jre -y && apt-get install maven -y
 
 WORKDIR /home/src
 
 RUN git clone https://github.com/kurashkevich/aws-test.git
 
+#CMD docker exec -i -t aws-demo-container /bin/bash
 
+#CMD aws-test/
+
+#RUN -it --rm --name aws-test -v "$(pwd)":/home/src -w /home/src/demo maven:3.3-jdk-8 mvn clean install
 #  https://codefresh.io/docker-tutorial/java_docker_pipeline/
 
 #Скачать код
