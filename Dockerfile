@@ -15,11 +15,11 @@ apt-get install git -y
 # Запустить мавен
 
 
-ADD ./target/demo-0.0.1-SNAPSHOT.jar demo.jar
+#ADD ./target/demo-0.0.1-SNAPSHOT.jar demo.jar
 
-EXPOSE 8080
+#EXPOSE 8080
 
-CMD java -jar demo.jar
+#CMD java -jar demo.jar
 
 
 #Создать докер image
@@ -60,4 +60,4 @@ CMD java -jar demo.jar
 # В Аспекты выносятся транзакции, логирование, security
 
 
-# Почитать АНОМАЛИИ БД!!!! Какие виды транцакций бывают в спринге, чистое грязное чтение и тд
+# Почитать АНОМАЛИИ БД!!!! Какие виды транцакций бывают в спринге, чистое грязное чтение и тд +  АСПЕКТЫ
