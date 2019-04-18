@@ -10,6 +10,7 @@ apt-get install default-jre -y \
 apt-get install git -y
 
 
+#  https://codefresh.io/docker-tutorial/java_docker_pipeline/
 
 #Скачать код
 # Запустить мавен
