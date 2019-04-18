@@ -5,7 +5,15 @@ RUN \
 # Update
 apt-get update -y && \
 # Install Java
-apt-get install default-jre -y
+apt-get install default-jre -y \
+
+apt-get install git -y
+
+
+
+#Скачать код
+# Запустить мавен
+
 
 ADD ./target/demo-0.0.1-SNAPSHOT.jar demo.jar
 
@@ -42,3 +50,14 @@ CMD java -jar demo.jar
 
 
 # Писать нужно stateless - сохранять состоаяния в БД
+
+
+# В таблицы данные вставляются, из view данные читаются
+# Почитать про репликацию и view
+
+
+
+# В Аспекты выносятся транзакции, логирование, security
+
+
+# Почитать АНОМАЛИИ БД!!!! Какие виды транцакций бывают в спринге, чистое грязное чтение и тд
