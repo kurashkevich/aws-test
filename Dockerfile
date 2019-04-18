@@ -1,13 +1,21 @@
 # Pull base image.
+#FROM ubuntu:latest
+
+#RUN \
+# Update
+#apt-get update -y && \
+# Install Java
+#apt-get install default-jre -y \
+
+#apt-get install git -y
+
 FROM ubuntu:latest
 
-RUN \
-# Update
-apt-get update -y && \
-# Install Java
-apt-get install default-jre -y \
+RUN apt-get update && apt-get install -y --no-install-recommends git && apt-get install -y openssh-server
 
-apt-get install git -y
+WORKDIR /home/src
+
+RUN git clone https://github.com/kurashkevich/aws-test.git
 
 
 #  https://codefresh.io/docker-tutorial/java_docker_pipeline/
@@ -61,4 +69,8 @@ apt-get install git -y
 # В Аспекты выносятся транзакции, логирование, security
 
 
-# Почитать АНОМАЛИИ БД!!!! Какие виды транцакций бывают в спринге, чистое грязное чтение и тд +  АСПЕКТЫ
+# Почитать АНОМАЛИИ БД!!!! Какие виды транцакций бывают в спринге, чистое грязное чтение и тд +  АСПЕКТЫ + Serializable
+
+
+
+# docker exec -i -t aws-demo-container /bin/bash
