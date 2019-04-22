@@ -1,6 +1,15 @@
 HELP.md
-/target/
 !.mvn/wrapper/maven-wrapper.jar
+/target/classes
+/target/dependency
+/target/dependency-maven-plugin-markers
+/target/generated-sources
+/target/generated-test-sources
+/target/maven-archiver
+/target/maven-status
+/target/surefire-reports
+/targer/test-classes
+
 
 ### STS ###
 .apt_generated
