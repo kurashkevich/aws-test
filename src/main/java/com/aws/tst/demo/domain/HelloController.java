@@ -10,4 +10,9 @@ public class HelloController {
     public String hello(){
         return "hello aws";
     }
+
+    @RequestMapping("/hello")
+    public String helloFromDocker(){
+        return "hello from docker";
+    }
 }

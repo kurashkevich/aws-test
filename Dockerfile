@@ -1,3 +1,31 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y --no-install-recommends git && apt-get install -y openssh-server && apt-get install openjdk-8-jdk -y && apt-get install maven -y
+
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin
+ENV MAVEN_HOME /usr/share/maven
+
+WORKDIR /home/src
+
+RUN git clone https://github.com/kurashkevich/aws-test.git
+
+
+EXPOSE 8080
+
+WORKDIR /home/src/aws-test
+
+RUN mvn clean install
+
+WORKDIR /home/src/aws-test/target
+
+CMD java -jar demo-0.0.1-SNAPSHOT.jar
+
+
+
+
+
+
 # Pull base image.
 #FROM ubuntu:latest
 
@@ -9,13 +37,13 @@
 
 #apt-get install git -y
 
-FROM ubuntu:latest
+#FROM ubuntu:Alpine
 
-RUN apt-get update && apt-get install -y --no-install-recommends git && apt-get install -y openssh-server && apt-get install default-jre -y && apt-get install maven -y
+#RUN apt-get update && apt-get install -y --no-install-recommends git && apt-get install -y openssh-server && apt-get install default-jre -y && apt-get install maven -y
 
-WORKDIR /home/src
+#WORKDIR /home/src
 
-RUN git clone https://github.com/kurashkevich/aws-test.git
+#RUN git clone https://github.com/kurashkevich/aws-test.git
 
 #CMD docker exec -i -t aws-demo-container /bin/bash
 
@@ -32,7 +60,7 @@ RUN git clone https://github.com/kurashkevich/aws-test.git
 
 #EXPOSE 8080
 
-#CMD java -jar demo.jar
+#CMD java -jar demo-0.0.1-SNAPSHOT.jar
 
 
 #Создать докер image
