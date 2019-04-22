@@ -1,14 +1,14 @@
 HELP.md
 !.mvn/wrapper/maven-wrapper.jar
-/target/classes
-/target/dependency
-/target/dependency-maven-plugin-markers
-/target/generated-sources
-/target/generated-test-sources
-/target/maven-archiver
-/target/maven-status
-/target/surefire-reports
-/targer/test-classes
+/classes
+/dependency
+/dependency-maven-plugin-markers
+/generated-sources
+/generated-test-sources
+/maven-archiver
+/maven-status
+/surefire-reports
+/test-classes
 
 
 ### STS ###
